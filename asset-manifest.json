@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/ReactChess/static/css/main.f0bcaac7.chunk.css",
+    "main.js": "/ReactChess/static/js/main.7a8d48bd.chunk.js",
+    "main.js.map": "/ReactChess/static/js/main.7a8d48bd.chunk.js.map",
+    "runtime-main.js": "/ReactChess/static/js/runtime-main.05737795.js",
+    "runtime-main.js.map": "/ReactChess/static/js/runtime-main.05737795.js.map",
+    "static/js/2.820741e5.chunk.js": "/ReactChess/static/js/2.820741e5.chunk.js",
+    "static/js/2.820741e5.chunk.js.map": "/ReactChess/static/js/2.820741e5.chunk.js.map",
+    "index.html": "/ReactChess/index.html",
+    "static/css/main.f0bcaac7.chunk.css.map": "/ReactChess/static/css/main.f0bcaac7.chunk.css.map",
+    "static/js/2.820741e5.chunk.js.LICENSE.txt": "/ReactChess/static/js/2.820741e5.chunk.js.LICENSE.txt",
+    "static/media/104.e96c56e1.png": "/ReactChess/static/media/104.e96c56e1.png",
+    "static/media/b_won.ff088bc5.png": "/ReactChess/static/media/b_won.ff088bc5.png",
+    "static/media/clock_tick.37643e61.gif": "/ReactChess/static/media/clock_tick.37643e61.gif",
+    "static/media/w_won.e09776c3.png": "/ReactChess/static/media/w_won.e09776c3.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.05737795.js",
+    "static/js/2.820741e5.chunk.js",
+    "static/css/main.f0bcaac7.chunk.css",
+    "static/js/main.7a8d48bd.chunk.js"
+  ]
+}
