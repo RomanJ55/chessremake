@@ -10,6 +10,9 @@ const Start = ({
     <div className="start">
       <div className="container flex">
         <h2 className="text-primary">Welcome to Online Chess</h2>
+        <span>
+          <i className="fas fa-chess fa-10x"></i>
+        </span>
         <form className="form card" autoComplete="off">
           <p className="text-primary">Please choose a username:</p>
           <input
