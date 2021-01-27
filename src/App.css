@@ -1,38 +1,386 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;700&display=swap");
+
+:root {
+  /* colors */
+  --primary-color: #da2c38;
+  --secondary-color: #a6b1e1;
+  --dark-color: #102542;
+  --light-color: #dcd6f7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* general */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Bitter";
+  color: #333;
+  line-height: 1.6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
+
+/* header */
+
+header {
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+}
+
+header .flex {
+  justify-content: space-between;
+}
+
+header li {
+  margin: 0 15px;
+}
+
+header a {
+  color: var(--light-color);
+  letter-spacing: 3px;
+}
+
+header a:hover {
+  border-bottom: var(--light-color) 1px solid;
+}
+
+/* start */
+.start {
+  background-color: var(--primary-color);
+}
+
+.start .container {
+  box-shadow: inset 0 0 0 2000px rgba(56, 56, 56, 0.1);
+  border: var(--dark-color) 2px solid;
+  border-radius: 10px;
+  min-height: 90vh;
+  background-image: radial-gradient(
+    circle,
+    #a6b1e1,
+    #7e8bb6,
+    #58678e,
+    #344467,
+    #102542
+  );
+}
+
+.start h2 {
+  letter-spacing: 5px;
+  font-size: 40px;
+  margin: 30px 0;
+}
+
+.start .flex {
   flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+}
+
+.start form input {
+  height: 40px;
+  max-width: 300px;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+.room-control {
+  margin: 40px auto;
+}
+
+/* game */
+.game {
+  background-color: var(--primary-color);
+}
+
+.game .container {
+  background: var(--secondary-color);
+  border: var(--dark-color) 2px solid;
+  border-radius: 10px;
+  min-height: 90vh;
+}
+
+.game .flex {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.game-info {
+  width: 100%;
+  background: var(--dark-color);
+  border: var(--light-color) 2px solid;
+  border-radius: 10px;
+  padding: 5px 0;
+}
+
+.game-info.flex {
+  flex-direction: row;
+}
+
+.game-info h4,
+h2 {
+  margin: 0 30px;
+  letter-spacing: 1px;
+}
+
+.time-area {
+  margin: 10px 0;
+}
+
+.time-area.flex {
+  flex-direction: row;
+}
+
+.clock {
+  max-width: 45px;
+  margin: 0 10px;
+}
+
+.game-footer {
+  width: 100%;
+  background: var(--dark-color);
+  border: var(--light-color) 2px solid;
+  border-radius: 10px;
+  padding: 15px 0;
+}
+
+.game-footer.flex {
+  flex-direction: row;
+}
+
+.game-footer .btn:hover {
+  background: var(--light-color);
+}
+
+.game-board {
+  margin: 15px;
+}
+
+.game-board.grid {
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 0.3px;
+}
+
+.square {
+  max-width: 90px;
+  max-height: 90px;
+  padding: 15px;
+}
+
+.end-game {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 6;
+}
+
+.modal {
+  border: var(--dark-color) 4px solid;
+  background: var(--light-color);
+  margin: 275px auto;
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 50px rgba(255, 0, 0, 1);
+  position: relative;
+}
+
+.modal.flex {
+  justify-content: space-evenly;
+  height: 50%;
+}
+
+.modal .grid {
+  height: 40px;
+}
+
+.modal h2 {
+  margin: 20px 0;
+}
+
+.modal img {
+  max-width: 400px;
+}
+
+/* footer */
+.footer {
+  background-color: var(--primary-color);
+  padding: 10px 0;
+}
+
+.footer nav li a {
+  color: var(--light-color);
+}
+
+.footer nav li a:hover {
+  color: var(--dark-color);
+}
+
+.footer .social a {
+  margin: 0 10px;
+  color: var(--secondary-color);
+}
+
+.footer .social i {
+  transition: 0.4s;
+}
+
+.footer .social i:hover {
+  transform: translateY(-10px);
+}
+
+/* utility classes */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+/* boxes */
+.flex {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* card */
+.card {
+  background-color: var(--light-color);
+  color: #333;
+  border: var(--dark-color) 1px solid;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  margin: 10px;
+}
+
+/* Button-stuff */
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 5px 20px;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: var(--dark-color);
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+  background: var(--dark-color);
+  color: var(--primary-color);
+}
+
+/* Text colors */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+
+.text-light {
+  color: var(--light-color);
+}
+
+@media only screen and (max-width: 720px) {
+  .room-control.grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+
+  .game-info.flex {
+    flex-direction: column;
+  }
+
+  .game-board.grid {
+    gap: 0.1px;
+  }
+
+  .game-footer.flex {
+    flex-direction: column;
+  }
+
+  header .flex {
+    flex-direction: column;
+    padding-bottom: 5px;
+  }
+
+  header ul.flex {
+    flex-direction: row;
+  }
+
+  .start h2 {
+    letter-spacing: 3px;
+    font-size: 34px;
+  }
+
+  .game-info h4,
+  h2 {
+    margin: 0;
+    letter-spacing: 0;
+  }
+
+  .square {
+    padding: 6px;
+  }
+
+  .clock {
+    max-width: 35px;
+    max-height: 35px;
   }
 }
