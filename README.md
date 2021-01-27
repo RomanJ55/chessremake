@@ -3,4 +3,4 @@
 # Online Chess Game with React as the frontend and Python in the backend
 
 ---
-# Not working yet(it's only static atm)
+# Not working yet(not yet connected to the backend)
