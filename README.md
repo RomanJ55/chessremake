@@ -1,6 +1,6 @@
 # Remake of my old Online chess game: https://github.com/RomanJ55/ReactChess
 
-# Online Chess Game with React as the frontend and Python in the backend https://romanj55.github.io/ReactChess/
+# Online Chess Game with React as the frontend and Python in the backend
 
 Using my own Python-Chess game project as the backend
 
