@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/chess-remake/static/css/main.f0bcaac7.chunk.css",
-    "main.js": "/chess-remake/static/js/main.7a8d48bd.chunk.js",
-    "main.js.map": "/chess-remake/static/js/main.7a8d48bd.chunk.js.map",
-    "runtime-main.js": "/chess-remake/static/js/runtime-main.73e1b587.js",
-    "runtime-main.js.map": "/chess-remake/static/js/runtime-main.73e1b587.js.map",
-    "static/js/2.820741e5.chunk.js": "/chess-remake/static/js/2.820741e5.chunk.js",
-    "static/js/2.820741e5.chunk.js.map": "/chess-remake/static/js/2.820741e5.chunk.js.map",
-    "index.html": "/chess-remake/index.html",
-    "static/css/main.f0bcaac7.chunk.css.map": "/chess-remake/static/css/main.f0bcaac7.chunk.css.map",
-    "static/js/2.820741e5.chunk.js.LICENSE.txt": "/chess-remake/static/js/2.820741e5.chunk.js.LICENSE.txt",
-    "static/media/104.e96c56e1.png": "/chess-remake/static/media/104.e96c56e1.png",
-    "static/media/b_won.ff088bc5.png": "/chess-remake/static/media/b_won.ff088bc5.png",
-    "static/media/clock_tick.37643e61.gif": "/chess-remake/static/media/clock_tick.37643e61.gif",
-    "static/media/w_won.e09776c3.png": "/chess-remake/static/media/w_won.e09776c3.png"
+    "main.css": "/chessremake/static/css/main.f0bcaac7.chunk.css",
+    "main.js": "/chessremake/static/js/main.7a8d48bd.chunk.js",
+    "main.js.map": "/chessremake/static/js/main.7a8d48bd.chunk.js.map",
+    "runtime-main.js": "/chessremake/static/js/runtime-main.dc39fcb3.js",
+    "runtime-main.js.map": "/chessremake/static/js/runtime-main.dc39fcb3.js.map",
+    "static/js/2.820741e5.chunk.js": "/chessremake/static/js/2.820741e5.chunk.js",
+    "static/js/2.820741e5.chunk.js.map": "/chessremake/static/js/2.820741e5.chunk.js.map",
+    "index.html": "/chessremake/index.html",
+    "static/css/main.f0bcaac7.chunk.css.map": "/chessremake/static/css/main.f0bcaac7.chunk.css.map",
+    "static/js/2.820741e5.chunk.js.LICENSE.txt": "/chessremake/static/js/2.820741e5.chunk.js.LICENSE.txt",
+    "static/media/104.e96c56e1.png": "/chessremake/static/media/104.e96c56e1.png",
+    "static/media/b_won.ff088bc5.png": "/chessremake/static/media/b_won.ff088bc5.png",
+    "static/media/clock_tick.37643e61.gif": "/chessremake/static/media/clock_tick.37643e61.gif",
+    "static/media/w_won.e09776c3.png": "/chessremake/static/media/w_won.e09776c3.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.73e1b587.js",
+    "static/js/runtime-main.dc39fcb3.js",
     "static/js/2.820741e5.chunk.js",
     "static/css/main.f0bcaac7.chunk.css",
     "static/js/main.7a8d48bd.chunk.js"
