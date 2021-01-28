@@ -1,7 +1,7 @@
 import { io } from "socket.io-client";
 
-// const socket = io("https://chessapi55.herokuapp.com/game");
-const socket = io("http://localhost:5000/game");
+const socket = io("https://chessapi55.herokuapp.com/game");
+// const socket = io("http://localhost:5000/game");
 
 export const createGame = (data, callback) => {
   socket.emit("createGame", data);

@@ -2,6 +2,6 @@
 
 # Online Chess Game with React as the frontend and Python in the backend
 
----
-# Not working yet(not yet connected to the backend)
-# preview: https://romanj55.github.io/chessremake/
+- Backend repo: https://github.com/RomanJ55/backend (hosted on heroku)
+
+# Check it out here: https://romanj55.github.io/chessremake/
