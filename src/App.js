@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { getRandomInt, animateError } from "./utils";
+import { createGame, joinGame, startGame } from "./socket";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Start from "./components/Start";
@@ -8,7 +9,7 @@ import Game from "./components/gameComponents/Game";
 
 function App() {
   const [name, setName] = useState("");
-  const [room, setRoom] = useState("");
+  const [room, setRoom] = useState(0);
   const [gameTime, setGameTime] = useState(-1);
   const [isInRoom, setIsInRoom] = useState(false);
 
@@ -17,20 +18,11 @@ function App() {
   };
 
   const roomChangedHandler = (e) => {
-    setRoom(e.target.value);
+    setRoom(parseInt(e.target.value));
   };
 
   const timeChangedHandler = (e) => {
     setGameTime(e.target.value);
-  };
-
-  const leaveHandler = () => {
-    //server stuff
-
-    //server stuff
-    setRoom("");
-    setGameTime(-1);
-    setIsInRoom(false);
   };
 
   const nameSubmitHandler = (e) => {
@@ -39,9 +31,6 @@ function App() {
     if (name === "") {
       animateError(userInput, "username required");
     } else {
-      // server stuff
-
-      // server stuff
       const rc = document.querySelector("#rc");
       const confirmUser = document.querySelector("#confirmButton");
       userInput.disabled = true;
@@ -53,23 +42,32 @@ function App() {
   const createGameHandler = (e) => {
     e.preventDefault();
     const rndRoom = getRandomInt(100000000, 999999999);
-    // server stuff
-
     if (name !== "" && gameTime > -1) {
-      setRoom(rndRoom);
-      setIsInRoom(true);
+      const clientData = { username: name, room: rndRoom, timer: gameTime };
+      createGame(clientData, (response) => {
+        if (response === "success") {
+          setRoom(rndRoom);
+          setIsInRoom(true);
+        }
+      });
     }
   };
 
   const joinGameHandler = (e) => {
+    const codeInput = document.querySelector("#code-input");
     e.preventDefault();
     if (room !== "") {
-      // server stuff
-
-      setIsInRoom(true);
+      const clientData = { username: name, room: room };
+      joinGame(clientData, (response) => {
+        if (response === "joined") {
+          setIsInRoom(true);
+          startGame();
+        } else {
+          animateError(codeInput, response);
+        }
+      });
     } else {
-      const codeInput = document.querySelector("#code-input");
-      animateError(codeInput, "invalid code");
+      animateError(codeInput, "Enter room code...");
     }
   };
 
@@ -86,12 +84,7 @@ function App() {
           joinGameHandler={joinGameHandler}
         />
       ) : (
-        <Game
-          playerName={name}
-          gameRoom={room}
-          gameTime={gameTime}
-          leaveHandler={leaveHandler}
-        />
+        <Game playerName={name} gameRoom={room} setIsInRoom={setIsInRoom} />
       )}
       <Footer />
     </div>

@@ -4,7 +4,7 @@ import clockTick from "../../images/clock_tick.gif";
 
 const GameTimer = ({ timeoutHandler, run, timer }) => {
   const [time, setTime] = useState(timer);
-  const [isOn, setIsOn] = useState(run);
+  const [isOn, setIsOn] = useState("");
 
   useEffect(() => {
     setIsOn(run);
