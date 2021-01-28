@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/chessremake/static/css/main.f0bcaac7.chunk.css",
-    "main.js": "/chessremake/static/js/main.7a8d48bd.chunk.js",
-    "main.js.map": "/chessremake/static/js/main.7a8d48bd.chunk.js.map",
+    "main.css": "/chessremake/static/css/main.deca9fc3.chunk.css",
+    "main.js": "/chessremake/static/js/main.bdc75b9f.chunk.js",
+    "main.js.map": "/chessremake/static/js/main.bdc75b9f.chunk.js.map",
     "runtime-main.js": "/chessremake/static/js/runtime-main.dc39fcb3.js",
     "runtime-main.js.map": "/chessremake/static/js/runtime-main.dc39fcb3.js.map",
-    "static/js/2.820741e5.chunk.js": "/chessremake/static/js/2.820741e5.chunk.js",
-    "static/js/2.820741e5.chunk.js.map": "/chessremake/static/js/2.820741e5.chunk.js.map",
+    "static/js/2.dc404b2a.chunk.js": "/chessremake/static/js/2.dc404b2a.chunk.js",
+    "static/js/2.dc404b2a.chunk.js.map": "/chessremake/static/js/2.dc404b2a.chunk.js.map",
     "index.html": "/chessremake/index.html",
-    "static/css/main.f0bcaac7.chunk.css.map": "/chessremake/static/css/main.f0bcaac7.chunk.css.map",
-    "static/js/2.820741e5.chunk.js.LICENSE.txt": "/chessremake/static/js/2.820741e5.chunk.js.LICENSE.txt",
-    "static/media/104.e96c56e1.png": "/chessremake/static/media/104.e96c56e1.png",
+    "static/css/main.deca9fc3.chunk.css.map": "/chessremake/static/css/main.deca9fc3.chunk.css.map",
+    "static/js/2.dc404b2a.chunk.js.LICENSE.txt": "/chessremake/static/js/2.dc404b2a.chunk.js.LICENSE.txt",
     "static/media/b_won.ff088bc5.png": "/chessremake/static/media/b_won.ff088bc5.png",
     "static/media/clock_tick.37643e61.gif": "/chessremake/static/media/clock_tick.37643e61.gif",
     "static/media/w_won.e09776c3.png": "/chessremake/static/media/w_won.e09776c3.png"
   },
   "entrypoints": [
     "static/js/runtime-main.dc39fcb3.js",
-    "static/js/2.820741e5.chunk.js",
-    "static/css/main.f0bcaac7.chunk.css",
-    "static/js/main.7a8d48bd.chunk.js"
+    "static/js/2.dc404b2a.chunk.js",
+    "static/css/main.deca9fc3.chunk.css",
+    "static/js/main.bdc75b9f.chunk.js"
   ]
 }
