@@ -5,3 +5,8 @@
 - Backend repo: https://github.com/RomanJ55/backend (hosted on heroku)
 
 # Check it out here: https://romanj55.github.io/chessremake/
+
+---
+Game running:
+
+![Running](assets/001.jpg "running")
