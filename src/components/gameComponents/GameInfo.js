@@ -20,6 +20,7 @@ const GameInfo = ({ gameRoom, roomInfo, turn, timeoutHandler }) => {
         </h4>
         {gameTime > 0 && (
           <GameTimer
+            reset={roomInfo[2] === true ? true : false}
             timer={gameTime}
             run={turn === "white" ? true : false}
             timeoutHandler={timeoutHandler}
@@ -33,6 +34,7 @@ const GameInfo = ({ gameRoom, roomInfo, turn, timeoutHandler }) => {
         </h4>
         {gameTime > 0 && (
           <GameTimer
+            reset={roomInfo[2] === true ? true : false}
             timer={gameTime}
             run={turn === "black" ? true : false}
             timeoutHandler={timeoutHandler}

@@ -2,9 +2,15 @@ import React, { useState, useEffect } from "react";
 import clock from "../../images/clock.png";
 import clockTick from "../../images/clock_tick.gif";
 
-const GameTimer = ({ timeoutHandler, run, timer }) => {
+const GameTimer = ({ timeoutHandler, run, timer, reset }) => {
   const [time, setTime] = useState(timer);
   const [isOn, setIsOn] = useState("");
+
+  useEffect(() => {
+    if (reset === false) {
+      setTime(timer);
+    }
+  }, [reset, timer]);
 
   useEffect(() => {
     setIsOn(run);

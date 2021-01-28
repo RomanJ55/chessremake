@@ -13,6 +13,12 @@ function App() {
   const [gameTime, setGameTime] = useState(-1);
   const [isInRoom, setIsInRoom] = useState(false);
 
+  const reset = () => {
+    setName("");
+    setRoom(0);
+    setGameTime(-1);
+  };
+
   const nameChangedHandler = (e) => {
     setName(e.target.value);
   };
@@ -84,7 +90,12 @@ function App() {
           joinGameHandler={joinGameHandler}
         />
       ) : (
-        <Game playerName={name} gameRoom={room} setIsInRoom={setIsInRoom} />
+        <Game
+          playerName={name}
+          gameRoom={room}
+          setIsInRoom={setIsInRoom}
+          resetParent={reset}
+        />
       )}
       <Footer />
     </div>

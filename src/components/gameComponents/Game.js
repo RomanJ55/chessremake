@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import {
   endGame,
+  giveUp,
   restartGame,
   leaveGame,
   getGameData,
@@ -11,7 +12,7 @@ import GameFooter from "./GameFooter";
 import GameBoard from "./GameBoard";
 import GameEndModal from "./GameEndModal";
 
-const Game = ({ playerName, gameRoom, setIsInRoom }) => {
+const Game = ({ playerName, gameRoom, setIsInRoom, resetParent }) => {
   const [roomInfo, setRoomInfo] = useState([]);
   const [gameData, setGameData] = useState([]);
 
@@ -27,9 +28,18 @@ const Game = ({ playerName, gameRoom, setIsInRoom }) => {
 
   useEffect(() => {
     getData();
+    return () => {
+      resetParent();
+    };
   }, []);
 
   const giveUpHandler = () => {
+    const clientData = { username: playerName, room: gameRoom };
+    giveUp(clientData);
+    getData();
+  };
+
+  const timeoutHandler = () => {
     endGame();
     getData();
   };
@@ -50,7 +60,8 @@ const Game = ({ playerName, gameRoom, setIsInRoom }) => {
     <div className="game">
       {gameData.is_winner && (
         <GameEndModal
-          winner={gameData.winner}
+          winnerColor={gameData.winner}
+          winnerName={gameData.winner === "black" ? roomInfo[1] : roomInfo[0]}
           leaveHandler={leaveHandler}
           playagainHandler={playagainHandler}
         />
@@ -60,9 +71,8 @@ const Game = ({ playerName, gameRoom, setIsInRoom }) => {
           roomInfo={roomInfo}
           turn={gameData.game_running ? gameData.turn : "waiting"}
           gameRoom={gameRoom}
-          timeoutHandler={giveUpHandler}
+          timeoutHandler={timeoutHandler}
         />
-
         <GameBoard
           board={gameData.board}
           rows={gameData.rows}

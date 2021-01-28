@@ -1,12 +1,17 @@
 import bWon from "../../images/b_won.png";
 import wWon from "../../images/w_won.png";
 
-const GameEndModal = ({ winner, leaveHandler, playagainHandler }) => {
+const GameEndModal = ({
+  winnerName,
+  winnerColor,
+  leaveHandler,
+  playagainHandler,
+}) => {
   return (
     <div className="end-game">
       <div className="modal flex">
-        <img src={winner === "white" ? wWon : bWon} alt="" />
-        <h2 className="text-primary">{winner} Won!</h2>
+        <img src={winnerColor === "white" ? wWon : bWon} alt="" />
+        <h2 className="text-primary">{winnerName} Won!</h2>
         <div className="grid">
           <button className="btn" onClick={playagainHandler}>
             Play again

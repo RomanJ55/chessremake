@@ -97,10 +97,16 @@ header a:hover {
   letter-spacing: 5px;
   font-size: 40px;
   margin: 30px 0;
+  text-shadow: black 4px 3px;
 }
 
 .start span {
   color: var(--primary-color);
+  transition: 1s;
+}
+
+.start span:hover {
+  transform: scale(1.1);
 }
 
 .start .flex {
@@ -143,6 +149,7 @@ header a:hover {
   border: var(--light-color) 2px solid;
   border-radius: 10px;
   padding: 5px 0;
+  animation: slideInFromTop 1s;
 }
 
 .game-info.flex {
@@ -174,6 +181,7 @@ h2 {
   border: var(--light-color) 2px solid;
   border-radius: 10px;
   padding: 15px 0;
+  animation: slideInFromBottom 1s;
 }
 
 .game-footer.flex {
@@ -232,12 +240,13 @@ h2 {
   height: 40px;
 }
 
-.modal h2 {
-  margin: 20px 0;
-}
-
 .modal img {
   max-width: 400px;
+  padding: 20px;
+}
+
+.modal .btn {
+  margin: 0;
 }
 
 /* footer */
@@ -260,7 +269,7 @@ h2 {
 }
 
 .footer .social i {
-  transition: 0.4s;
+  transition: 0.6s;
 }
 
 .footer .social i:hover {
@@ -325,6 +334,11 @@ h2 {
   color: var(--primary-color);
 }
 
+.btn:disabled {
+  background: var(--secondary-color);
+  cursor: not-allowed;
+}
+
 /* Text colors */
 .text-primary {
   color: var(--primary-color);
@@ -342,7 +356,48 @@ h2 {
   color: var(--light-color);
 }
 
+.band {
+  animation-name: band;
+  animation-duration: 1.5s;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes band {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.25, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
 @media only screen and (max-width: 720px) {
+  .container {
+    padding: 0 10px;
+  }
+
   .room-control.grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -350,6 +405,10 @@ h2 {
 
   .game-info.flex {
     flex-direction: column;
+  }
+
+  .game-board {
+    margin: 5px;
   }
 
   .game-board.grid {

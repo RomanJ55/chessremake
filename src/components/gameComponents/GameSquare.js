@@ -27,6 +27,7 @@ const GameSquare = ({
       }
     });
   };
+
   return (
     <button
       className="square"
@@ -38,7 +39,11 @@ const GameSquare = ({
       }}
       onClick={clickHandler}
     >
-      <img src={process.env.PUBLIC_URL + imagePath} alt={type} />
+      <img
+        src={process.env.PUBLIC_URL + imagePath}
+        alt={type}
+        className={selected ? "band" : null}
+      />
     </button>
   );
 };

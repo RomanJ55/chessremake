@@ -29,6 +29,10 @@ export const endGame = () => {
   socket.emit("gameEnd");
 };
 
+export const giveUp = (data) => {
+  socket.emit("giveup", data);
+};
+
 export const restartGame = () => {
   socket.emit("restart");
 };
