@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="container grid grid-3">
         <div>
           <h2 className="text-dark">Online Chess</h2>
-          <p>Copyright &copy; 2021 RomanJ55</p>
+          <p className="text-dark">Copyright &copy; 2021 RomanJ55</p>
         </div>
         <nav>
           <ul>

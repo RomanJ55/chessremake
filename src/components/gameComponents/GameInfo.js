@@ -14,7 +14,7 @@ const GameInfo = ({ gameRoom, roomInfo, turn, timeoutHandler }) => {
 
   return (
     <div className="game-info flex">
-      <div className="flex">
+      <div className="flex name-timer">
         <h4 className="text-light">
           White: {whiteName === "" ? "waiting..." : whiteName}
         </h4>
@@ -28,7 +28,7 @@ const GameInfo = ({ gameRoom, roomInfo, turn, timeoutHandler }) => {
         )}
       </div>
       <h2 className="text-primary">Room: {gameRoom}</h2>
-      <div className="flex">
+      <div className="flex name-timer">
         <h4 className="text-light">
           Black: {blackName === "" ? "waiting..." : blackName}
         </h4>
