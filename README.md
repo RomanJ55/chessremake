@@ -16,4 +16,4 @@
 ---
 Game running:
 
-![Running](assets/001.jpg "running")
+![Running](onlineChessCombined.jpg "running")
